@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/**
+ * Class seeks to build a grocery simulation that is represented
+ * through three parallel arrays. main utilizes two functions,
+ * printInventory and restockItem, to give the user the ability
+ * to view and edit the supermarket's stock.
+ */
 public class AssignmentOne {
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
         System.out.println("Task One To Be Implemented");
@@ -11,7 +17,8 @@ public class AssignmentOne {
 
     /**
      * Main, displays menu for user to interact with.
-     * Also stores parallel arrays that represent the grocery store.
+     * Also stores parallel arrays that represent the grocery store's
+     * items, prices, and stock.
      * 
      * @param args Command line arguments.
      */
