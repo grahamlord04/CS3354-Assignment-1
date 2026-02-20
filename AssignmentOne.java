@@ -9,6 +9,12 @@ public class AssignmentOne {
         System.out.println("Task Two To Be Implemented");
     }
 
+    /**
+     * Main, displays menu for user to interact with.
+     * Also stores parallel arrays that represent the grocery store.
+     * 
+     * @param args Command line arguments.
+     */
     public static void main(String[] args) {
         String[] itemNames = new String[10];
         double[] itemPrices = new double[10];
