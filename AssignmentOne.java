@@ -8,7 +8,13 @@ import java.util.Scanner;
  */
 public class AssignmentOne {
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
-
+        /**
+        * Prints all non-empty grocery items with their price and stock.
+        *
+        * @param names  array of item names
+        * @param prices array of item prices
+        * @param stocks array of item stock quantities
+        */
         System.out.println("\nInventory");
         System.out.println("---------------------------");
 
