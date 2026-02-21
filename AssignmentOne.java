@@ -8,7 +8,28 @@ import java.util.Scanner;
  */
 public class AssignmentOne {
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
-        System.out.println("Task One To Be Implemented");
+        /**
+        * Prints all non-empty grocery items with their price and stock.
+        *
+        * @param names  array of item names
+        * @param prices array of item prices
+        * @param stocks array of item stock quantities
+        */
+        System.out.println("\nInventory");
+        System.out.println("---------------------------");
+
+        for (int i = 0; i < names.length; i++) {
+
+            if (names[i] != null) {
+
+                System.out.println("Item: " + names[i]
+                        + " | Price: $" + prices[i]
+                        + " | Stock: " + stocks[i]);
+
+            } else {
+                // Empty slot — do nothing
+            }
+        }
     }
 
     public static void restockItem(String[] names, int[] stocks, String target, int amount) {
