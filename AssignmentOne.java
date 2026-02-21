@@ -7,13 +7,21 @@ import java.util.Scanner;
  * to view and edit the supermarket's stock.
  */
 public class AssignmentOne {
-    public static void printInventory(String[] names, double[] prices, int[] stocks) {
-        System.out.println("Task One To Be Implemented");
+    public static void restockItem(String[] names, int[] stocks, String target, int amount) {
+
+    for (int i = 0; i < names.length; i++) {
+
+        if (names[i] != null && names[i].equalsIgnoreCase(target)) {
+
+            stocks[i] += amount;
+            System.out.println("Restocked " + names[i] +
+                               ". New stock: " + stocks[i]);
+            return;
+        }
     }
 
-    public static void restockItem(String[] names, int[] stocks, String target, int amount) {
-        System.out.println("Task Two To Be Implemented");
-    }
+    System.out.println("Item not found.");
+}
 
     /**
      * Main, displays menu for user to interact with.
