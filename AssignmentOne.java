@@ -28,6 +28,8 @@ public class AssignmentOne {
         int[] itemStocks = new int[10];
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
+        String target;
+        int amount = 0;
 
         while (choice != 3) {
             System.out.println("\nGrocery Managment Menu");
@@ -39,8 +41,14 @@ public class AssignmentOne {
             choice = scanner.nextInt();
             if (choice == 1)
                 printInventory(itemNames, itemPrices, itemStocks);
-            if (choice == 2)
-                restockItem(itemNames, itemStocks, null, choice);
+            if (choice == 2) {
+                System.out.print("Enter Item To Restock: ");
+                scanner.nextLine();
+                target = scanner.nextLine();
+                System.out.print("Enter Amount To Restock: ");
+                amount = scanner.nextInt();
+                restockItem(itemNames, itemStocks, target, amount);
+            }
         }
         scanner.close();
         System.out.println("Exiting System.");
