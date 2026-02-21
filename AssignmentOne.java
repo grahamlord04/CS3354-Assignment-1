@@ -23,6 +23,30 @@ public class AssignmentOne {
  * @param target the name of the item to restock
  * @param amount the quantity to add to the item's current stock
  */
+    public static void printInventory(String[] names, double[] prices, int[] stocks) {
+        /**
+        * Prints all non-empty grocery items with their price and stock.
+        *
+        * @param names  array of item names
+        * @param prices array of item prices
+        * @param stocks array of item stock quantities
+        */
+        System.out.println("\nInventory");
+        System.out.println("---------------------------");
+
+        for (int i = 0; i < names.length; i++) {
+
+            if (names[i] != null) {
+
+                System.out.println("Item: " + names[i]
+                        + " | Price: $" + prices[i]
+                        + " | Stock: " + stocks[i]);
+
+            } else {
+                // Empty slot — do nothing
+            }
+        }
+    }
 
     public static void restockItem(String[] names, int[] stocks, String target, int amount) {
 
@@ -53,6 +77,8 @@ public class AssignmentOne {
         int[] itemStocks = new int[10];
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
+        String target;
+        int amount = 0;
 
         while (choice != 3) {
             System.out.println("\nGrocery Managment Menu");
@@ -64,8 +90,14 @@ public class AssignmentOne {
             choice = scanner.nextInt();
             if (choice == 1)
                 printInventory(itemNames, itemPrices, itemStocks);
-            if (choice == 2)
-                restockItem(itemNames, itemStocks, null, choice);
+            if (choice == 2) {
+                System.out.print("Enter Item To Restock: ");
+                scanner.nextLine();
+                target = scanner.nextLine();
+                System.out.print("Enter Amount To Restock: ");
+                amount = scanner.nextInt();
+                restockItem(itemNames, itemStocks, target, amount);
+            }
         }
         scanner.close();
         System.out.println("Exiting System.");
